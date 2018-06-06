@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NVp-aU-cNa">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="4PM-df-7FU">
+            <objects>
+                <navigationController id="NVp-aU-cNa" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="CXa-3O-Ql5">
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="mF7-Hx-bVe" kind="relationship" relationship="rootViewController" id="y8x-ye-JbM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BUd-y1-IdN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-570" y="121"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="vmS-AV-3qt">
+            <objects>
+                <viewController id="mF7-Hx-bVe" customClass="HomeViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eov-Yl-JOx" userLabel="View1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cam Demo" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="fBM-ZK-Zv7">
+                                <rect key="frame" x="115" y="100" width="184" height="43"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GDa-RO-ajN">
+                                <rect key="frame" x="177" y="647.33333333333337" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="HLe-5H-LNX"/>
+                                    <constraint firstAttribute="width" constant="60" id="kdE-eq-Brj"/>
+                                </constraints>
+                                <state key="normal" title="camara" image="takephoto.png"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius " value="5"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="camara:" destination="mF7-Hx-bVe" eventType="touchUpInside" id="K5e-JD-CLA"/>
+                                </connections>
+                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vfO-Fo-E6g">
+                                <rect key="frame" x="0.0" y="157" width="412.66666666666669" height="422"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gjs-h7-63d">
+                                        <rect key="frame" x="0.0" y="0.0" width="412.66666666666669" height="4219.333333333333"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="250" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2oK-RX-ch2">
+                                                <rect key="frame" x="20" y="20" width="372.66666666666669" height="4179.333333333333"/>
+                                                <string key="text">&lt;div align="center"&gt;
+  &lt;img src="https://www.tensorflow.org/images/tf_logo_transp.png"&gt;&lt;br&gt;&lt;br&gt;
+&lt;/div&gt;
+
+-----------------
+
+
+| **`Documentation`** |
+|-----------------|
+| [![Documentation](https://img.shields.io/badge/api-reference-blue.svg)](https://www.tensorflow.org/api_docs/) |
+
+**TensorFlow** is an open source software library for numerical computation using
+data flow graphs.  The graph nodes represent mathematical operations, while
+the graph edges represent the multidimensional data arrays (tensors) that flow
+between them.  This flexible architecture enables you to deploy computation to one
+or more CPUs or GPUs in a desktop, server, or mobile device without rewriting
+code.  TensorFlow also includes [TensorBoard](https://www.tensorflow.org/programmers_guide/summaries_and_tensorboard), a data visualization toolkit.
+
+TensorFlow was originally developed by researchers and engineers
+working on the Google Brain team within Google's Machine Intelligence Research
+organization for the purposes of conducting machine learning and deep neural
+networks research.  The system is general enough to be applicable in a wide
+variety of other domains, as well.
+
+Keep up to date with release announcements and security updates by
+subscribing to
+[announce@tensorflow.org](https://groups.google.com/a/tensorflow.org/forum/#!forum/announce).
+
+## Installation
+*See [Installing TensorFlow](https://www.tensorflow.org/get_started/os_setup.html) for instructions on how to install our release binaries or how to build from source.*
+
+People who are a little more adventurous can also try our nightly binaries:
+
+**Nightly pip packages**
+* We are pleased to announce that TensorFlow now offers nightly pip packages
+under the [tf-nightly](https://pypi.python.org/pypi/tf-nightly) and
+[tf-nightly-gpu](https://pypi.python.org/pypi/tf-nightly-gpu) project on pypi.
+Simply run `pip install tf-nightly` or `pip install tf-nightly-gpu` in a clean
+environment to install the nightly TensorFlow build. We support CPU and GPU
+packages on Linux, Mac, and Windows.
+
+
+#### *Try your first TensorFlow program*
+```shell
+$ python
+```
+```python
+&gt;&gt;&gt; import tensorflow as tf
+&gt;&gt;&gt; hello = tf.constant('Hello, TensorFlow!')
+&gt;&gt;&gt; sess = tf.Session()
+&gt;&gt;&gt; sess.run(hello)
+'Hello, TensorFlow!'
+&gt;&gt;&gt; a = tf.constant(10)
+&gt;&gt;&gt; b = tf.constant(32)
+&gt;&gt;&gt; sess.run(a + b)
+42
+&gt;&gt;&gt; sess.close()
+```
+
+## Contribution guidelines
+
+**If you want to contribute to TensorFlow, be sure to review the [contribution
+guidelines](CONTRIBUTING.md). This project adheres to TensorFlow's
+[code of conduct](CODE_OF_CONDUCT.md). By participating, you are expected to
+uphold this code.**
+
+**We use [GitHub issues](https://github.com/tensorflow/tensorflow/issues) for
+tracking requests and bugs. So please see
+[TensorFlow Discuss](https://groups.google.com/a/tensorflow.org/forum/#!forum/discuss) for general questions
+and discussion, and please direct specific questions to [Stack Overflow](https://stackoverflow.com/questions/tagged/tensorflow).**
+
+The TensorFlow project strives to abide by generally accepted best practices in open-source software development:
+
+[![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/1486/badge)](https://bestpractices.coreinfrastructure.org/projects/1486)
+
+
+## Continuous build status
+
+### Official Builds
+
+| Build Type      | Status | Artifacts |
+| ---             | ---    | ---       |
+| **Linux CPU**   | ![Status](https://storage.googleapis.com/tensorflow-kokoro-build-badges/ubuntu-cc.png) | [pypi](https://pypi.org/project/tf-nightly/) |
+| **Linux GPU**   | ![Status](https://storage.googleapis.com/tensorflow-kokoro-build-badges/ubuntu-gpu-cc.png) | [pypi](https://pypi.org/project/tf-nightly-gpu/) |
+| **Linux XLA**   | TBA | TBA |
+| **MacOS**       | ![Status](https://storage.googleapis.com/tensorflow-kokoro-build-badges/macos-py2-cc.png) | [pypi](https://pypi.org/project/tf-nightly/) |
+| **Windows CPU** | [![Status](https://ci.tensorflow.org/buildStatus/icon?job=tensorflow-master-win-cmake-py)](https://ci.tensorflow.org/job/tensorflow-master-win-cmake-py) | [pypi](https://pypi.org/project/tf-nightly/) |
+| **Windows GPU** | [![Status](http://ci.tensorflow.org/job/tf-master-win-gpu-cmake/badge/icon)](http://ci.tensorflow.org/job/tf-master-win-gpu-cmake/) | [pypi](https://pypi.org/project/tf-nightly-gpu/) |
+| **Android**     | [![Status](https://ci.tensorflow.org/buildStatus/icon?job=tensorflow-master-android)](https://ci.tensorflow.org/job/tensorflow-master-android) | [![Download](https://api.bintray.com/packages/google/tensorflow/tensorflow/images/download.svg)](https://bintray.com/google/tensorflow/tensorflow/_latestVersion) [demo APK](https://ci.tensorflow.org/view/Nightly/job/nightly-android/lastSuccessfulBuild/artifact/out/tensorflow_demo.apk), [native libs](https://ci.tensorflow.org/view/Nightly/job/nightly-android/lastSuccessfulBuild/artifact/out/native/) [build history](https://ci.tensorflow.org/view/Nightly/job/nightly-android/) |
+
+
+### Community Supported Builds
+
+| Build Type      | Status | Artifacts |
+| ---             | ---    | ---       |
+| **IBM s390x**       | [![Build Status](http://ibmz-ci.osuosl.org/job/TensorFlow_IBMZ_CI/badge/icon)](http://ibmz-ci.osuosl.org/job/TensorFlow_IBMZ_CI/) | TBA |
+| **IBM ppc64le CPU** | [![Build Status](http://powerci.osuosl.org/job/TensorFlow_Ubuntu_16.04_CPU/badge/icon)](http://powerci.osuosl.org/job/TensorFlow_Ubuntu_16.04_CPU/) | TBA |
+
+
+## For more information
+
+* [TensorFlow Website](https://www.tensorflow.org)
+* [TensorFlow White Papers](https://www.tensorflow.org/about/bib)
+* [TensorFlow YouTube Channel](https://www.youtube.com/channel/UC0rqucBdTuFTjJiefW5t-IQ)
+* [TensorFlow Model Zoo](https://github.com/tensorflow/models)
+* [TensorFlow MOOC on Udacity](https://www.udacity.com/course/deep-learning--ud730)
+* [TensorFlow Course at Stanford](https://web.stanford.edu/class/cs20si)
+
+Learn more about the TensorFlow community at the [community page of tensorflow.org](https://www.tensorflow.org/community) for a few ways to participate.
+
+## License
+
+[Apache License 2.0](LICENSE)</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="2oK-RX-ch2" firstAttribute="centerX" secondItem="gjs-h7-63d" secondAttribute="centerX" id="3x4-FQ-LuE"/>
+                                            <constraint firstItem="2oK-RX-ch2" firstAttribute="top" secondItem="gjs-h7-63d" secondAttribute="top" constant="20" id="MWg-b6-HJS"/>
+                                            <constraint firstItem="2oK-RX-ch2" firstAttribute="centerY" secondItem="gjs-h7-63d" secondAttribute="centerY" id="S1C-ch-62k"/>
+                                            <constraint firstItem="2oK-RX-ch2" firstAttribute="leading" secondItem="gjs-h7-63d" secondAttribute="leading" constant="20" id="bUu-Pu-xE1"/>
+                                            <constraint firstAttribute="bottom" secondItem="2oK-RX-ch2" secondAttribute="bottom" constant="20" id="giV-Jx-WnJ"/>
+                                            <constraint firstAttribute="trailing" secondItem="2oK-RX-ch2" secondAttribute="trailing" constant="20" id="vp7-Pn-xX4"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="gjs-h7-63d" firstAttribute="top" secondItem="vfO-Fo-E6g" secondAttribute="top" id="Avp-eH-EWq"/>
+                                    <constraint firstAttribute="trailing" secondItem="gjs-h7-63d" secondAttribute="trailing" id="FvU-GD-kWY"/>
+                                    <constraint firstAttribute="bottom" secondItem="gjs-h7-63d" secondAttribute="bottom" constant="291.5" id="R0j-fU-LcH"/>
+                                    <constraint firstItem="gjs-h7-63d" firstAttribute="width" secondItem="vfO-Fo-E6g" secondAttribute="width" id="qFS-75-uvg"/>
+                                    <constraint firstItem="gjs-h7-63d" firstAttribute="leading" secondItem="vfO-Fo-E6g" secondAttribute="leading" id="uTc-gd-UxQ"/>
+                                    <constraint firstItem="gjs-h7-63d" firstAttribute="height" secondItem="vfO-Fo-E6g" secondAttribute="height" priority="250" constant="-291.5" id="xTa-0F-2Fq"/>
+                                </constraints>
+                                <viewLayoutGuide key="safeArea" id="crX-yd-EF5"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vfO-Fo-E6g" firstAttribute="leading" secondItem="eov-Yl-JOx" secondAttribute="leading" id="0pv-4E-6Ux"/>
+                            <constraint firstItem="GDa-RO-ajN" firstAttribute="centerX" secondItem="eov-Yl-JOx" secondAttribute="centerX" id="4wk-kv-j71"/>
+                            <constraint firstItem="fBM-ZK-Zv7" firstAttribute="top" secondItem="y01-gb-rcK" secondAttribute="top" constant="36" id="Q59-D7-7eI"/>
+                            <constraint firstItem="vfO-Fo-E6g" firstAttribute="centerY" secondItem="eov-Yl-JOx" secondAttribute="centerY" id="VjB-bj-cH8"/>
+                            <constraint firstItem="GDa-RO-ajN" firstAttribute="centerY" secondItem="eov-Yl-JOx" secondAttribute="centerY" multiplier="1.8" constant="15" id="aAu-F9-WDI"/>
+                            <constraint firstItem="fBM-ZK-Zv7" firstAttribute="centerX" secondItem="eov-Yl-JOx" secondAttribute="centerX" id="itY-4V-FhX"/>
+                            <constraint firstItem="vfO-Fo-E6g" firstAttribute="top" secondItem="y01-gb-rcK" secondAttribute="top" constant="93" id="mgr-MD-tNV"/>
+                            <constraint firstItem="vfO-Fo-E6g" firstAttribute="centerX" secondItem="GDa-RO-ajN" secondAttribute="centerX" id="pNq-sn-WSP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="y01-gb-rcK"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="748-PN-UIn"/>
+                    <connections>
+                        <outlet property="lbl" destination="2oK-RX-ch2" id="Ybv-Ji-fAk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l4e-vP-WUI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="279.71014492753625" y="120.65217391304348"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="takephoto.png" width="2400" height="2400"/>
+    </resources>
+</document>
